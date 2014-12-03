@@ -18,29 +18,31 @@ Copy the directory structure under mqtt-uno32 to your sketchbook directory. Beca
 
 ## Pins used
 
- UNO32 | W550io | |
- Pins  | Pins | Asignment | Description
--------|-------|-----------|--------------------
- (4) | - | SS | (SD Card, optional)
- (10) | (6)| SS | (WizNet)
- (11) | (3)| MOSI | (SPI Pin 4)
- (12) | (4)| MISO | (SPI Pin 1)
- (13) | (5)| SCK | (SPI Pin 3)
- (  ) | () | N_RST | (SPI Pin 5)
- (  ) | () | N_RDY |
- (  ) | () | N_INT |
- (  ) | () | GND | (SPI Pin 6)
- (  ) | () | 3v3 | (Power Header)
- - | - | 5v0 | (SPI Pin 2)
- | | |
- (2) | - | DHT22 |
+| UNO32 | W550io |           |                     |
+| Pins  | Pins   | Asignment | Description         |
+|-------|--------|-----------|-------------------- |
+| (4)   | -      | SS        | (SD Card, optional) |
+| (10)  | (6)    | SS        | (WizNet)            |
+| (11)  | (3)| MOSI | (SPI Pin 4)|
+| (12)  | (4)| MISO | (SPI Pin 1)|
+| (13)  | (5)| SCK | (SPI Pin 3)|
+| (  )  | () | N_RST | (SPI Pin 5)|
+| (  )  | () | N_RDY ||
+| (  )  | () | N_INT ||
+| (  )  | () | GND | (SPI Pin 6)|
+| (  )  | () | 3v3 | (Power Header)|
+| -     | - | 5v0 | (SPI Pin 2)|
+|       | | ||
+| (2)   | - | DHT22 ||
 
 
 ## Sample output
 * Command:
+
 ** mosquitto_sub -d -t '#'
 
 * Output:
+
 '''
 Received PUBLISH (d0, q0, r0, m0, 'outTopic', ... (35 bytes))
 Temperature = 21.8, Humidity = 41.2
@@ -53,6 +55,7 @@ Temperature = 21.9, Humidity = 41.5
 Received PUBLISH (d0, q0, r0, m0, 'outTopic', ... (35 bytes))
 Temperature = 21.9, Humidity = 41.0
 '''
+
 ## Philosophy
 
 As with most personal projects, I wanted to play with a few unfamiliar technologies. In this case MQTT, the MicroChip PIC32MX base ChipKit Uno32 (not the larger Mega32) and the WIZnet Ethernet boards. For a long time I've wanted to connect a remote node to my home network and not something connected to a serial port. Almost all the examples are of the larger Arduino Megas or Chipkit Mega32 or serially attached Arduino Unos and Chipkit Uno32. In addition I wanted to get the Arduino's Ethernet library ported to MPIDE. In addition I wanted to experiment with MQTT which should make it easy to publish and subscribe from multiple servers, services and devices.
