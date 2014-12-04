@@ -60,11 +60,12 @@ Copy the directory structure under mqtt-uno32 to your sketchbook directory. Beca
 </tr>
 </table>
 
-
 ## Sample output
 * Command:
 ** mosquitto_sub -d -t '#'
 * Output:
+
+This is the output of the command <em>mosquitto_sub -d -t '#'</em>. I haven't attempted to do any fancy formatting (such as JSON or XML). Just human readable output. Later I may switch to JSON as it's pretty easy to work with, pretty minimal also and easy to translate into other protocols such as XML.
 
 <code><pre>Received PUBLISH (d0, q0, r0, m0, 'outTopic', ... (35 bytes))
 Temperature = 21.8, Humidity = 41.2
@@ -77,9 +78,16 @@ Temperature = 21.9, Humidity = 41.5
 Received PUBLISH (d0, q0, r0, m0, 'outTopic', ... (35 bytes))
 Temperature = 21.9, Humidity = 41.0</pre></code>
 
+## Current state of the hardware
+
+![Uno32 w/W550io and DHT22 on a breaboard](http://linuxha.com/images/W550io-Uno32.png)
+
+Pretty ugly looking actually, that setup has been traveling around for at least 6 months. I was very much surprised that it still worked. I did have to connect the SS back to pin 10 on the Uno32 and I disconnected the LED I used as a quick and dirty probe. I'll tidy it up and see if I can get it to work on the Uno32's SPI interface at the top of the picture.
+
 ## Philosophy
 
 As with most personal projects, I wanted to play with a few unfamiliar technologies. In this case MQTT, the MicroChip PIC32MX base ChipKit Uno32 (not the larger Mega32) and the WIZnet Ethernet boards. For a long time I've wanted to connect a remote node to my home network and not something connected to a serial port. Almost all the examples are of the larger Arduino Megas or Chipkit Mega32 or serially attached Arduino Unos and Chipkit Uno32. In addition I wanted to get the Arduino's Ethernet library ported to MPIDE. In addition I wanted to experiment with MQTT which should make it easy to publish and subscribe from multiple servers, services and devices.
+
 
 ## Attributions (and thanks)
 
@@ -89,4 +97,26 @@ As with most personal projects, I wanted to play with a few unfamiliar technolog
 
 ## License 
 
-Undecided
+Because the sample code isn't really mine (it's mostly a few basic API calls) and the MQTT shell I'll stick with the MIT License. I'm not providing a License for the WIZnet Ethernet library, the DHT22 library or the PubSubClient libraries. They each have their own. The MIT license mentioned here is for the mqtt-basic.pde I've expanded on.
+
+The MIT License (MIT)
+
+Copyright (c) [2014] [Neil Cherry]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
