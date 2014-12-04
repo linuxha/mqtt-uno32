@@ -18,22 +18,56 @@ Copy the directory structure under mqtt-uno32 to your sketchbook directory. Beca
 
 ## Pins used
 
-| UNO32 | W550io |           |                     |
-| Pins  | Pins   | Asignment | Description         |
-|-------|--------|-----------|-------------------- |
-| (4)   | -      | SS        | (SD Card, optional) |
-| (10)  | (6)    | SS        | (WizNet)            |
-| (11)  | (3)| MOSI | (SPI Pin 4)|
-| (12)  | (4)| MISO | (SPI Pin 1)|
-| (13)  | (5)| SCK | (SPI Pin 3)|
-| (  )  | () | N_RST | (SPI Pin 5)|
-| (  )  | () | N_RDY ||
-| (  )  | () | N_INT ||
-| (  )  | () | GND | (SPI Pin 6)|
-| (  )  | () | 3v3 | (Power Header)|
-| -     | - | 5v0 | (SPI Pin 2)|
-|       | | ||
-| (2)   | - | DHT22 ||
+<table>
+<tr>
+<td> UNO32 </td><td> W550io </td><td>           </td><td>                     </td>
+</tr>
+<tr>
+<td> Pins  </td><td> Pins   </td><td> Asignment </td><td> Description         </td>
+</tr>
+<tr>
+<td>-------</td><td>--------</td><td>-----------</td><td>-------------------- </td>
+</tr>
+<tr>
+<td> (4)   </td><td> -      </td><td> SS        </td><td> (SD Card, optional) </td>
+</tr>
+<tr>
+<td> (10)  </td><td> (6)    </td><td> SS        </td><td> (WizNet)            </td>
+</tr>
+<tr>
+<td> (11)  </td><td> (3)</td><td> MOSI </td><td> (SPI Pin 4)</td>
+</tr>
+<tr>
+<td> (12)  </td><td> (4)</td><td> MISO </td><td> (SPI Pin 1)</td>
+</tr>
+<tr>
+<td> (13)  </td><td> (5)</td><td> SCK </td><td> (SPI Pin 3)</td>
+</tr>
+<tr>
+<td> (  )  </td><td> () </td><td> N_RST </td><td> (SPI Pin 5)</td>
+</tr>
+<tr>
+<td> (  )  </td><td> () </td><td> N_RDY </td><td></td>
+</tr>
+<tr>
+<td> (  )  </td><td> () </td><td> N_INT </td><td></td>
+</tr>
+<tr>
+<td> (  )  </td><td> () </td><td> GND </td><td> (SPI Pin 6)</td>
+</tr>
+<tr>
+<td> (  )  </td><td> () </td><td> 3v3 </td><td> (Power Header)</td>
+</tr>
+<tr>
+<td> -     </td><td> - </td><td> 5v0 </td><td> (SPI Pin 2)</td>
+</tr>
+<tr>
+<td>       </td><td> </td><td> </td><td></td>
+</tr>
+<tr>
+<td> (2)   </td><td> - </td><td> DHT22 </td><td></td>
+</tr>
+</table>
 
 
 ## Sample output
@@ -43,7 +77,8 @@ Copy the directory structure under mqtt-uno32 to your sketchbook directory. Beca
 
 * Output:
 
-'''
+<code>
+<pre>
 Received PUBLISH (d0, q0, r0, m0, 'outTopic', ... (35 bytes))
 Temperature = 21.8, Humidity = 41.2
 Received PUBLISH (d0, q0, r0, m0, 'outTopic', ... (35 bytes))   
@@ -54,7 +89,8 @@ Received PUBLISH (d0, q0, r0, m0, 'outTopic', ... (35 bytes))
 Temperature = 21.9, Humidity = 41.5
 Received PUBLISH (d0, q0, r0, m0, 'outTopic', ... (35 bytes))
 Temperature = 21.9, Humidity = 41.0
-'''
+</pre>
+</code>
 
 ## Philosophy
 
