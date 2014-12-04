@@ -20,16 +20,10 @@ Copy the directory structure under mqtt-uno32 to your sketchbook directory. Beca
 
 <table>
 <tr>
-<td> UNO32 </td><td> W550io </td><td>           </td><td>                     </td>
+<th> UNO32 Pins </th><th> W550io Pins </th><th> Asignment </th><th> Description </th>
 </tr>
 <tr>
-<td> Pins  </td><td> Pins   </td><td> Asignment </td><td> Description         </td>
-</tr>
-<tr>
-<td>-------</td><td>--------</td><td>-----------</td><td>-------------------- </td>
-</tr>
-<tr>
-<td> (4)   </td><td> -      </td><td> SS        </td><td> (SD Card, optional) </td>
+<td> (4)   </td><td> - </td><td> SS        </td><td> (SD Card, optional) </td>
 </tr>
 <tr>
 <td> (10)  </td><td> (6)    </td><td> SS        </td><td> (WizNet)            </td>
@@ -62,24 +56,17 @@ Copy the directory structure under mqtt-uno32 to your sketchbook directory. Beca
 <td> -     </td><td> - </td><td> 5v0 </td><td> (SPI Pin 2)</td>
 </tr>
 <tr>
-<td>       </td><td> </td><td> </td><td></td>
-</tr>
-<tr>
-<td> (2)   </td><td> - </td><td> DHT22 </td><td></td>
+<td> (2)   </td><td> Tx </td><td> DHT22 Tx (Software SPI like protocol</td><td></td>
 </tr>
 </table>
 
 
 ## Sample output
 * Command:
-
 ** mosquitto_sub -d -t '#'
-
 * Output:
 
-<code>
-<pre>
-Received PUBLISH (d0, q0, r0, m0, 'outTopic', ... (35 bytes))
+<code><pre>Received PUBLISH (d0, q0, r0, m0, 'outTopic', ... (35 bytes))
 Temperature = 21.8, Humidity = 41.2
 Received PUBLISH (d0, q0, r0, m0, 'outTopic', ... (35 bytes))   
 Temperature = 21.9, Humidity = 41.3
@@ -88,9 +75,7 @@ Received PINGRESP
 Received PUBLISH (d0, q0, r0, m0, 'outTopic', ... (35 bytes))
 Temperature = 21.9, Humidity = 41.5
 Received PUBLISH (d0, q0, r0, m0, 'outTopic', ... (35 bytes))
-Temperature = 21.9, Humidity = 41.0
-</pre>
-</code>
+Temperature = 21.9, Humidity = 41.0</pre></code>
 
 ## Philosophy
 
